@@ -1,0 +1,19 @@
+body {
+    margin: 0;
+}
+
+section {
+    padding: 5px;
+}
+
+header, header ul {
+    list-style: none;
+    display: flex;
+}
+header ul li {
+    margin: 0px 10px;
+}
+
+hr {
+    margin: 0;
+}
