@@ -17,10 +17,10 @@ jobs:
 
       - name: Установка зависимостей
         run: |
-          cd frontend
+          cd site
           npm install
 
       - name: Запуск линтера
         run: |
-          cd frontend
+          cd site
           npx eslint . || true
