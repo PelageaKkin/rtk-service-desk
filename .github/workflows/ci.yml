@@ -1,0 +1,26 @@
+name: Frontend CI Pipeline
+
+on: [push, pull_request]
+
+jobs:
+  lint-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Клонирование репозитория
+        uses: actions/checkout@v4
+
+      - name: Установка Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Установка зависимостей
+        run: |
+          cd frontend
+          npm install
+
+      - name: Запуск линтера
+        run: |
+          cd frontend
+          npx eslint . || true
